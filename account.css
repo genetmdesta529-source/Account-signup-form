@@ -1,0 +1,107 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styling */
+body {
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form container */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs, selects, file upload */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[list],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+/* File input */
+input[type="file"] {
+    margin-top: 8px;
+}
+
+/* Checkbox terms */
+.terms {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Password rules list */
+#list {
+    margin: 8px 0 15px 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Small notes */
+small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}

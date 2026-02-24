@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email sign up</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+    <form action="" class="container">
+        <label for="name">Name </label>
+        <input type="text" id="name" placeholder="Name" required />
+        <label for="gender">gender </label>
+        <select name="gender" id="gender" required>
+            <option value="" disabled selected hidden> Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="phone number">phone number </label>
+        <input type="number" placeholder="phone number">
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" placeholder="MM/DD/YYYY" required>
+        <label for="country">Country </label>
+        <input list="africanCountries" id="country" name="country" placeholder="Country" required>
+        <datalist id="africanCountries">
+            <option value="Algeria">
+            <option value="Angola">
+            <option value="Benin">
+            <option value="Botswana">
+            <option value="Burkina Faso">
+            <option value="Burundi">
+            <option value="Cabo Verde">
+            <option value="Cameroon">
+            <option value="Central African Republic">
+            <option value="Chad">
+            <option value="Comoros">
+            <option value="Congo (Republic)">
+            <option value="Congo (Democratic Republic)">
+            <option value="Djibouti">
+            <option value="Egypt">
+            <option value="Equatorial Guinea">
+            <option value="Eritrea">
+            <option value="Eswatini">
+            <option value="Ethiopia">
+            <option value="Gabon">
+            <option value="Gambia">
+            <option value="Ghana">
+            <option value="Guinea">
+            <option value="Guinea-Bissau">
+            <option value="Ivory Coast">
+            <option value="Kenya">
+            <option value="Lesotho">
+            <option value="Liberia">
+            <option value="Libya">
+            <option value="Madagascar">
+            <option value="Malawi">
+            <option value="Mali">
+            <option value="Mauritania">
+            <option value="Mauritius">
+            <option value="Morocco">
+            <option value="Mozambique">
+            <option value="Namibia">
+            <option value="Niger">
+            <option value="Nigeria">
+            <option value="Rwanda">
+            <option value="São Tomé and Príncipe">
+            <option value="Senegal">
+            <option value="Seychelles">
+            <option value="Sierra Leone">
+            <option value="Somalia">
+            <option value="South Africa">
+            <option value="South Sudan">
+            <option value="Sudan">
+            <option value="Tanzania">
+            <option value="Togo">
+            <option value="Tunisia">
+            <option value="Uganda">
+            <option value="Zambia">
+            <option value="Zimbabwe">
+        </datalist>
+        <label for="username">username </label>
+        <input type="text" placeholder="username">
+        <label for="email">Email </label>
+        <input type="email" id="email" placeholder="example@gmail.com" required autocomplete="email">
+        <label for="rcovery email">Recovery Email (optional)</label>
+        <input type="email" id="recovery" name=" recovery" placeholder="example@gmail.com" autocomplete="email">
+        <label for="password">Password </label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required
+            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_])(?!.*\s).{10,32}$"
+            title="10-32 characters, at least one uppercase, one lowercase, one number, one special character, and no spaces.">
+
+        <small>
+            <ul id="list">
+                <li>10–32 characters</li>
+                <li>At least one uppercase letter (A–Z)</li>
+                <li>At least one lowercase letter (a–z)</li>
+                <li>At least one number (0–9)</li>
+                <li>At least one special character (!@#$%^&*)</li>
+                <li>No space characters</li>
+            </ul>
+        </small>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Re-enter your password" required>
+        <small>password must match</small>
+        <label for="profile">Profile Picture</label>
+        <input type="file" id="profilePic" accept="image/*">
+        <label class="terms">
+            <input type="checkbox" id="agree" name="agree" required>
+            I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> .
+        </label>
+        <label for="create account">Create account</label>
+        <button type="submit">Create Account</button>
+        <script>
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (e) {
+                const password = document.getElementById("password").value;
+                const confirm = document.getElementById("confirm").value;
+
+                if (password !== confirm) {
+                    alert("Passwords do not match!");
+                    e.preventDefault();
+                }
+            });
+        </script>
+    </form>
+</body>
+
+</html>
